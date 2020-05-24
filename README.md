@@ -44,6 +44,19 @@ A simple script that takes a picture using at solar noon every day.
 30  Solar noon fetch retry count exceeded
 ```
 
+# SystemD Service
+
+It's a good idea to run this as a service so if the script is killed for any reason it is restarted and can be set to start on boot.
+
+To do both these things simply copy the included `solarTimelapse.service` file to `/etc/systemd/system/solarTimelapse.service` and run:
+
+```
+systemctl start solarTimelapse
+systemctl enable solartTimelapse
+```
+
+*Note this service is assuming you have cloned the code to `/home/pi/solar-scynchronised-timelapse`*
+
 # 3rd Parties
 
 - Uses [sunrise-sunset.org](https://sunrise-sunset.org) to fetch the solar noon time

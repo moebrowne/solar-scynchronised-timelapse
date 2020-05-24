@@ -1,0 +1,14 @@
+[Unit]
+Description=Solar Timelapse
+After=network.target
+
+[Service]
+ExecStart=bash /home/pi/solar-scynchronised-timelapse/timelapse.sh -d /home/pi/solarTimelapse
+WorkingDirectory=/home/pi/solar-scynchronised-timelapse
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
