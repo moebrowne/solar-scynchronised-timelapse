@@ -1,6 +1,6 @@
 # Solar Synchronised Timelapse
 
-A simple script that takes a picture using at solar noon every day.
+A simple script that takes a picture every day at solar noon.
 
 - It uses `raspistill` to actually take the picture but any command can be used.
 - It outputs files named using an ISO-8601 date: `YYYY-MM-DD.jpg` (use `--nameFormat` to customise this).
